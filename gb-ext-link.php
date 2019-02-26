@@ -1,7 +1,7 @@
 <?php
 /*
 * Plugin Name: External Link Block
-* Description: External Link Block
+* Description: external link block for Gutenberg WordPress Editor
 * Author: uptimizt
 * Author URI: https://github.com/uptimizt
 * Version: 0.1
@@ -15,7 +15,6 @@ namespace uptimizt;
  */
 final class Ext_Link_Core
 {
-
   /**
    * Endpoint key
    */
@@ -25,6 +24,7 @@ final class Ext_Link_Core
    * meta_key_link
    */
   public static $meta_key_link = 'ext-link-block';
+
   /**
    * The init
    */

@@ -82,6 +82,10 @@ final class Ext_Link_Block
   public static function render_block($attributes, $content){
     $value = get_post_meta( get_the_ID(), 'ext-link-block', true );
     $link = untrailingslashit(get_permalink(get_the_ID())) . '/extlink';
+
+    // echo '<pre>';
+    // var_dump($content);
+    // echo '</pre>';
     // check value is set before outputting
     if ( $value ) {
         return sprintf( '<a href="%s" target="_blank">ссылка</a>', esc_html( $link ) );
@@ -89,7 +93,6 @@ final class Ext_Link_Block
         return $content;
     }
   }
-
 
 }
 

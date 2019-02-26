@@ -13,6 +13,12 @@ registerBlockType('gb-u7/ext-link', {
 
   attributes: {
 
+    content: {
+      type: 'string',
+      source: 'html',
+      selector: 'p',
+    },
+
     blockValue: {
       type: 'string',
       source: 'meta',
@@ -24,6 +30,7 @@ registerBlockType('gb-u7/ext-link', {
   edit: function(props) {
     var className = props.className;
     var setAttributes = props.setAttributes;
+    var content = props.attributes.content;
 
     function updateBlockValue(blockValue) {
       setAttributes({ blockValue });
@@ -41,7 +48,7 @@ registerBlockType('gb-u7/ext-link', {
   },
 
   save: function() {
-    return null;
+    return el('p', {}, 'Hello saved content.');
   },
 
 });
