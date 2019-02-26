@@ -81,11 +81,23 @@ final class Ext_Link_Block
    * render_block
    */
   public static function render_block($attributes, $content){
+
     $value = get_post_meta( get_the_ID(), 'ext-link-block', true );
+    $title = get_post_meta( get_the_ID(), 'ext-link-block-title', true );
+    if(empty($title)){
+      $title = sprintf('Ссылка: <br/>%s', $value);
+    }
+
     $link = untrailingslashit(get_permalink(get_the_ID())) . '/extlink';
 
     if ( $value ) {
-        return sprintf( '<a href="%s" target="_blank">%s</a>', esc_html( $link ), $content );
+        return sprintf(
+          '<noindex><div>
+            <a href="%s" target="_blank" rel="nofollow">%s</a>
+          </div></noindex>',
+          esc_html( $link ),
+          $title
+        );
     } else {
         return $content;
     }

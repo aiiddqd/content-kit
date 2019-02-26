@@ -15,10 +15,9 @@ registerBlockType('gb-u7/ext-link', {
 
     title: {
       type: 'string',
-      source: 'html',
-      selector: 'span',
+      source: 'meta',
+      meta: 'ext-link-block-title',
     },
-
     extLink: {
       type: 'string',
       source: 'meta',
@@ -28,11 +27,9 @@ registerBlockType('gb-u7/ext-link', {
   },
 
   edit: function(props) {
-    // var className = props.className;
-    // var setAttributes = props.setAttributes;
-    // var content = props.attributes.content;
 
     return el('div', { className: props.className },
+      el('p', {}, 'Укажите ссылку и т д'),
       el(TextControl, {
         label: 'Ссылка / URL',
         value: props.attributes.extLink,
@@ -46,18 +43,17 @@ registerBlockType('gb-u7/ext-link', {
         onChange: function(value) {
           props.setAttributes({ title: value });
         },
-      })
+      }),
     );
   },
 
-  save: function(props) {
-    // return null;
+  save: function() {
+    return null;
 
-    return el('div', { className: props.className },
-      el('span', {}, props.attributes.title),
-    );
+    // return el('span', {}, props.attributes.title);
     // return el('div', { className: props.className },
     //   el('span', {}, props.attributes.title),
+    //   el('a', {}, props.attributes.title),
     // );
   },
 
