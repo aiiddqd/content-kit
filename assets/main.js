@@ -2,7 +2,7 @@
 var el = wp.element.createElement;
 var registerBlockType = wp.blocks.registerBlockType;
 var TextControl = wp.components.TextControl;
-
+// var RichText = wp.editor.RichText;
 
 registerBlockType('gb-u7/ext-link', {
   title: 'Ext Link',
@@ -13,13 +13,13 @@ registerBlockType('gb-u7/ext-link', {
 
   attributes: {
 
-    content: {
+    title: {
       type: 'string',
       source: 'html',
-      selector: 'p',
+      selector: 'span',
     },
 
-    blockValue: {
+    extLink: {
       type: 'string',
       source: 'meta',
       meta: 'ext-link-block'
@@ -28,27 +28,41 @@ registerBlockType('gb-u7/ext-link', {
   },
 
   edit: function(props) {
-    var className = props.className;
-    var setAttributes = props.setAttributes;
-    var content = props.attributes.content;
+    // var className = props.className;
+    // var setAttributes = props.setAttributes;
+    // var content = props.attributes.content;
 
-    function updateBlockValue(blockValue) {
-      setAttributes({ blockValue });
-    }
-
-    return el(
-      'div',
-      { className: className },
+    return el('div', { className: props.className },
       el(TextControl, {
         label: 'Ссылка / URL',
-        value: props.attributes.blockValue,
-        onChange: updateBlockValue
+        value: props.attributes.extLink,
+        onChange: function(value) {
+          props.setAttributes({ extLink: value });
+        },
+      }),
+      el(TextControl, {
+        label: 'Название',
+        value: props.attributes.title,
+        onChange: function(value) {
+          props.setAttributes({ title: value });
+        },
       })
     );
   },
 
-  save: function() {
-    return el('p', {}, 'Hello saved content.');
+  save: function(props) {
+    // return null;
+
+    return el('div', { className: props.className },
+      el('span', {}, props.attributes.title),
+    );
+    // return el('div', { className: props.className },
+    //   el('span', {}, props.attributes.title),
+    // );
+  },
+
+  supports: {
+    multiple: false,
   },
 
 });

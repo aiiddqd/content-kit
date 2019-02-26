@@ -4,7 +4,7 @@
 * Description: external link block for Gutenberg WordPress Editor
 * Author: uptimizt
 * Author URI: https://github.com/uptimizt
-* Version: 0.1
+* Version: 0.2
 * Lang: ext_link_u7
 */
 
