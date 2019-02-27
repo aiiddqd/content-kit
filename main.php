@@ -5,7 +5,7 @@
 * Author: uptimizt
 * Author URI: https://github.com/uptimizt
 * GitHub Plugin URI: https://github.com/uptimizt/ext-link-block
-* Version: 0.3
+* Version: 0.4
 * Lang: ext_link_u7
 */
 

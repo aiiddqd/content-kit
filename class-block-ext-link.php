@@ -14,68 +14,59 @@ final class Ext_Link_Block
   {
     add_action( 'init', function(){
 
-          register_meta( 'post', 'ext-link-block', array(
-            'show_in_rest' => true,
-            'single' => true,
-            'type' => 'string',
-          ));
-          register_meta( 'post', 'ext-link-block-title', array(
-            'show_in_rest' => true,
-            'single' => true,
-            'type' => 'string',
-          ));
+      register_meta( 'post', 'ext-link-block', array(
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+      ));
+      register_meta( 'post', 'ext-link-block-title', array(
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+      ));
 
-          /**
-           * editor style
-           */
-          wp_register_style(
-            'gutenberg-ext-link-u7-style-editor',
-            plugins_url( 'assets/style.css', __FILE__ ),
-            array( 'wp-edit-blocks' ),
-            filemtime( plugin_dir_path( __FILE__ ) . 'assets/editor.css' )
-          );
+      /**
+       * editor style
+       */
+      wp_register_style(
+        'gutenberg-ext-link-u7-style-editor',
+        plugins_url( 'assets/style.css', __FILE__ ),
+        array( 'wp-edit-blocks' ),
+        filemtime( plugin_dir_path( __FILE__ ) . 'assets/editor.css' )
+      );
 
-          /**
-           * frontend style
-           */
-          wp_register_style(
-            'gutenberg-ext-link-u7-style',
-            plugins_url( 'assets/style.css', __FILE__ ),
-            array( 'wp-edit-blocks' ),
-            filemtime( plugin_dir_path( __FILE__ ) . 'assets/style.css' )
-          );
+      /**
+       * frontend style
+       */
+      wp_register_style(
+        'gutenberg-ext-link-u7-style',
+        plugins_url( 'assets/style.css', __FILE__ ),
+        array( 'wp-edit-blocks' ),
+        filemtime( plugin_dir_path( __FILE__ ) . 'assets/style.css' )
+      );
 
-          /**
-           * Register the block
-           */
-          register_block_type( 'gb-u7/ext-link', array(
-            'editor_script' => 'gutenberg-ext-link-u7',
-            'editor_style' => 'gutenberg-ext-link-u7-style-editor',
-            'style' => 'gutenberg-ext-link-u7-style',
-            'render_callback' => array(__CLASS__, 'render_block'),
-          ));
+      /**
+       * Register the block
+       */
+      register_block_type( 'gb-u7/ext-link', array(
+        'editor_script' => 'gutenberg-ext-link-u7',
+        'editor_style' => 'gutenberg-ext-link-u7-style-editor',
+        'style' => 'gutenberg-ext-link-u7-style',
+        'render_callback' => array(__CLASS__, 'render_block'),
+      ));
+
+      wp_register_script(
+          'gutenberg-ext-link-u7',
+          plugins_url( 'assets/main.js', __FILE__ ),
+          array(
+            'wp-blocks',
+            'wp-element',
+            'wp-components',
+          ),
+          $ver = filemtime( plugin_dir_path( __FILE__ ) . 'assets/main.js' )
+      );
     });
 
-    add_action( 'enqueue_block_editor_assets', array(__CLASS__, 'block_editor_assets') );
-  }
-
-  /**
-   * block_editor_assets
-   */
-  public static function block_editor_assets(){
-    /**
-     * script
-     */
-    wp_register_script(
-        'gutenberg-ext-link-u7',
-        plugins_url( 'assets/main.js', __FILE__ ),
-        array(
-          'wp-blocks',
-          'wp-element',
-          'wp-components',
-        ),
-        $ver = filemtime( plugin_dir_path( __FILE__ ) . 'assets/main.js' )
-    );
   }
 
   /**
