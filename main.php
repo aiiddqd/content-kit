@@ -4,7 +4,8 @@
 * Description: external link block for Gutenberg WordPress Editor
 * Author: uptimizt
 * Author URI: https://github.com/uptimizt
-* Version: 0.2
+* GitHub Plugin URI: https://github.com/uptimizt/ext-link-block
+* Version: 0.3
 * Lang: ext_link_u7
 */
 
@@ -31,7 +32,7 @@ final class Ext_Link_Core
   public static function init()
   {
     add_action('plugins_loaded', function(){
-      require_once 'class-gb-ext-link.php';
+      require_once 'class-block-ext-link.php';
     });
 
     add_action('init', array(__CLASS__, 'add_rewrite_endpoint'));
