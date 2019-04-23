@@ -25,15 +25,18 @@ final class Ext_Link_Block
         'type' => 'string',
       ));
 
-      /**
-       * editor style
-       */
-      wp_register_style(
-        'gutenberg-ext-link-u7-style-editor',
-        plugins_url( 'assets/style.css', __FILE__ ),
-        array( 'wp-edit-blocks' ),
-        filemtime( plugin_dir_path( __FILE__ ) . 'assets/editor.css' )
-      );
+      if(is_admin()){
+        /**
+         * editor style
+         */
+        wp_register_style(
+          'gutenberg-ext-link-u7-style-editor',
+          plugins_url( 'assets/editor.css', __FILE__ ),
+          array( 'wp-edit-blocks' ),
+          filemtime( plugin_dir_path( __FILE__ ) . 'assets/editor.css' )
+        );
+      }
+
 
       /**
        * frontend style
