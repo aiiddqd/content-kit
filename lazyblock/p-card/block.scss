@@ -1,0 +1,52 @@
+.lb-post-card {
+
+
+    padding: 1em;
+    margin: 2em 0em;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 0px 20px 0px #00000021;
+
+    &:hover {
+
+        img {
+            position: relative;
+            top: -1px;
+        }
+
+        .lb-post-card--title {
+            a {
+                color: rgb(0, 65, 187);
+            }
+        }
+    }
+
+    @media (min-width: 500px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .entry-wrapper {
+        @media (min-width: 500px) {
+            order: -1;
+            // flex-basis: 80%;
+        }
+    }
+
+    .post-thumbnail {
+        @media (min-width: 500px) {
+            margin-left: 1em;
+            flex: none;
+        }
+    }
+
+    .lb-post-card--title {
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        a {
+            color: black;
+            text-underline-offset: initial !important;
+            text-decoration: none !important;
+        }
+    }
+}

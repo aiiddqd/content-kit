@@ -1,0 +1,56 @@
+.lb-post-card {
+  padding: 1em;
+  margin: 2em 0em;
+  display: block;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0px 20px 0px #00000021;
+          box-shadow: 0 0px 20px 0px #00000021;
+}
+
+.lb-post-card:hover img {
+  position: relative;
+  top: -1px;
+}
+
+.lb-post-card:hover .lb-post-card--title a {
+  color: #0041bb;
+}
+
+@media (min-width: 500px) {
+  .lb-post-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 500px) {
+  .lb-post-card .entry-wrapper {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+@media (min-width: 500px) {
+  .lb-post-card .post-thumbnail {
+    margin-left: 1em;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
+.lb-post-card .lb-post-card--title {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.lb-post-card .lb-post-card--title a {
+  color: black;
+  text-underline-offset: initial !important;
+  text-decoration: none !important;
+}
