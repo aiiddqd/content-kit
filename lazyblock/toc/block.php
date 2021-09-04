@@ -5,9 +5,9 @@
  * @var  string $context Preview context [editor,frontend].
  */
 
-if(!isset($_GET['dd'])){
-    return;
-}
+// if(!isset($_GET['dd'])){
+    // return;
+// }
 
 $post = get_post();
 if(empty($post->ID)){
@@ -39,7 +39,7 @@ function toc_filter_blocks($blocks){
 }
 
 $blocks = toc_filter_blocks($blocks);
-dd($blocks);
+// dd($blocks);
 ?>
 <div class="lbu7-toc">
     <?= 134 ?>
