@@ -2,8 +2,9 @@
 /*
 * Plugin Name: @ Lazy Blocks by @uptimizt
 * Description: Lazy Blocks by @uptimizt
-* Author: uptimnizt
-* Version: 0.1
+* Author: uptimizt
+* GitHub Plugin URI: https://github.com/uptimizt/lbu7
+* Version: 0.20211202
 */
 
 namespace uptimizt;
