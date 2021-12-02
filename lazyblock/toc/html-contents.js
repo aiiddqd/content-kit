@@ -45,7 +45,7 @@ const htmlContents = function(toc, options) {
   //get levels in between top and bottom - make query string
   let lvls = []
   for (let i = options.top; i <= options.bottom; i++) {
-    lvls.push('article h' + i)
+    lvls.push('.entry-content h' + i)
   }
 
   //select all levels
