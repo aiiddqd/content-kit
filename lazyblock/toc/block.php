@@ -10,37 +10,25 @@
 // }
 
 $post = get_post();
-if(empty($post->ID)){
-    return;
-}
 
-$blocks = parse_blocks(get_the_content());
-
-function toc_filter_blocks($blocks){
-    $blocks_for_table = [];
-    foreach($blocks as $block){
-        if(strpos($block['innerHTML'], '<h2') !== false){
-            $blocks_for_table[] = $block;
-        }
-        if(strpos($block['innerHTML'], '<h3') !== false){
-            $blocks_for_table[] = $block;
-        }
-
-        if(!empty($block['innerBlocks'])){
-            $inner_blocks = toc_filter_blocks($block['innerBlocks']);
-            foreach($inner_blocks as $ib){
-                $blocks_for_table[] = $ib;
-            }
-        }
-        
-    }
-
-    return $blocks_for_table;
-}
-
-$blocks = toc_filter_blocks($blocks);
-// dd($blocks);
+$js_url = plugins_url('html-contents.js', __FILE__);
 ?>
-<div class="lbu7-toc">
-    <?= 134 ?>
-</div>
+<div class="lbu7-toc-header"><?= $attributes['header'] ?></div>
+<div class="lbu7-toc-separator" style="height:2px"></div>
+<div class="lbu7-toc"></div>
+
+<script src="<?= $js_url ?>"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+    htmlContents('.lbu7-toc', {
+            top: <?= $attributes['top'] ?>,         // 1-6: biggest header to include in outline
+            bottom: <?= $attributes['bottom'] ?>,      // 1-6: smallest header to include in outline
+            addIds: true,   // true/false: add ids to H* that don't have them
+            addLinks: true, //true/false: add links to outline? 
+            listType: '<?= $attributes['type'] ?>',  // 'u' or 'o': (u)nordered or (o)rdered list type
+            filter: false   // String or function: CSS style selector to exclude from outline
+                            //   or function to filter to pass to Array.filter
+        })
+    })
+    
+</script>
