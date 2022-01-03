@@ -1,4 +1,4 @@
-# Blocks for Gutenberg
+# Media Kit and Blocks for Gutenberg editor 
 
 - table of contents
 - telegram widget
