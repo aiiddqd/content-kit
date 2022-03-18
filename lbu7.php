@@ -22,7 +22,7 @@ add_action('plugins_loaded', function () {
 function load_blocks()
 {
   foreach (get_directories() as $dir_name) {
-    $dir_path = sprintf('%s/lazyblock/%s', __DIR__, $dir_name);
+    $dir_path = sprintf('%s/blocks/%s', __DIR__, $dir_name);
     if (!is_dir($dir_path)) {
       continue;
     }
@@ -40,7 +40,7 @@ function load_blocks()
 function frontend()
 {
   foreach (get_directories() as $dir_name) {
-    $dir_path = sprintf('%s/lazyblock/%s', __DIR__, $dir_name);
+    $dir_path = sprintf('%s/blocks/%s', __DIR__, $dir_name);
     if (!is_dir($dir_path)) {
       continue;
     }
@@ -50,7 +50,7 @@ function frontend()
     if (!file_exists($css_file_path)) {
       continue;
     }
-    $block_css_url = plugins_url(sprintf('lazyblock/%s/block.css', $dir_name), __FILE__);
+    $block_css_url = plugins_url(sprintf('blocks/%s/block.css', $dir_name), __FILE__);
     $block_css_version = filemtime($css_file_path);;
 
     wp_enqueue_style($dir_name . '-style', $block_css_url, [], $block_css_version);
@@ -61,7 +61,7 @@ function frontend()
 function backend()
 {
   foreach (get_directories() as $dir_name) {
-    $dir_path = sprintf('%s/lazyblock/%s', __DIR__, $dir_name);
+    $dir_path = sprintf('%s/blocks/%s', __DIR__, $dir_name);
     if (!is_dir($dir_path)) {
       continue;
     }
@@ -71,7 +71,7 @@ function backend()
     if (!file_exists($css_file_path)) {
       continue;
     }
-    $block_css_url = plugins_url(sprintf('lazyblock/%s/block.css', $dir_name), __FILE__);
+    $block_css_url = plugins_url(sprintf('blocks/%s/block.css', $dir_name), __FILE__);
     $block_css_version = filemtime($css_file_path);;
 
     wp_enqueue_style($dir_name . '-style', $block_css_url, ['wp-edit-blocks'], $block_css_version);
@@ -81,7 +81,7 @@ function backend()
 
 function commone_style()
 {
-  $path = 'lazyblock/style.css';
+  $path = 'assets/commone.css';
   $url = plugins_url($path, __FILE__);
   $path = __DIR__ . '/' . $path;
   if (file_exists($path)) {
@@ -108,7 +108,7 @@ function chg_template_path($template, $attributes, $block, $context)
 
 function get_directories()
 {
-  $directories = scandir(__DIR__ . '/lazyblock');
+  $directories = scandir(__DIR__ . '/blocks');
   $directories = array_diff($directories, array('..', '.'));
   return $directories;
 }
