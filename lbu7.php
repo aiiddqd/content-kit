@@ -4,7 +4,7 @@
 * Description: Lazy Blocks by @uptimizt
 * Author: uptimizt
 * GitHub Plugin URI: https://github.com/uptimizt/lbu7
-* Version: 0.20220122
+* Version: 0.20220318
 */
 
 namespace uptimizt\LazyBlocks;
