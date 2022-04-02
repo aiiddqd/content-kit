@@ -9,8 +9,6 @@
 
 if(isset($args['post_id'])){
     $attributes = $args; // different ways for get block from LB and from get_template_part
-    // dd($attributes);
-
 }
 
 if(isset($args['post'])){
