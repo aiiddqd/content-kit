@@ -1,14 +1,13 @@
 <?php
 /*
-* Plugin Name: @ Lazy Blocks by @uptimizt
-* Description: Lazy Blocks by @uptimizt
+* Plugin Name: @ Content Kit by @uptimizt
+* Description: Lazy Blocks
 * Author: uptimizt
-* GitHub Plugin URI: https://github.com/uptimizt/lbu7
-* Version: 0.20220318
+* GitHub Plugin URI: https://github.com/uptimizt/content-kit-u7
+* Version: 0.20220407
 */
 
 namespace uptimizt\LazyBlocks;
-
 
 add_action('plugins_loaded', function () {
   add_filter('init', __NAMESPACE__ . '\\' . 'load_blocks');
