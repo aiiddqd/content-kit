@@ -1,0 +1,30 @@
+.list-none {
+  list-style-type: none;
+}
+
+.list-inline-comma {
+  list-style-type: none;
+  display: inline;
+  padding: 0px;
+}
+
+.list-inline-comma li {
+  display: inline;
+  padding: 0px;
+}
+
+.list-inline-comma li::after {
+  content: ", ";
+}
+
+.list-inline-comma li:last-child::after {
+  content: "";
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}

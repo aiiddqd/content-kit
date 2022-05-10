@@ -1,0 +1,22 @@
+.is-style-cover-radius-1rem {
+    // border-radius: 1rem;
+
+    .has-background-dim {
+        border-radius: 1rem;
+
+        &::before {
+            border-radius: 1rem;
+        }
+    }
+}
+
+.is-style-cover-radius-3rem {
+
+    .has-background-dim {
+        border-radius: 3rem;
+
+        &::before {
+            border-radius: 3rem;
+        }
+    }
+}

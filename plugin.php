@@ -7,88 +7,75 @@
 * Version: 0.220510
 */
 
-namespace uptimizt\LazyBlocks;
+namespace ContentKitBase;
 
-add_filter('lzb/block_render/include_template', __NAMESPACE__ . '\\' . 'chg_template_path', 10, 4);
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\' . 'frontend');
-add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\\' . 'backend');
+// add_filter('lzb/block_render/include_template', __NAMESPACE__ . '\\' . 'chg_template_path', 10, 4);
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\' . 'commone_style');
-add_action('plugins_loaded', __NAMESPACE__ . '\\blocks_load_configs');
-add_action('plugins_loaded', __NAMESPACE__ . '\\styles_load_configs');
+add_action('plugins_loaded', function(){
+  require_once __DIR__ . '/styles/loader.php';
+  require_once __DIR__ . '/blocks/loader.php';
+});
 
 
 
-function styles_load_configs()
-{
-  $files = glob(__DIR__ . '/styles/*/config.php');
-  foreach ($files as $file) {
-    require_once $file;
+/**
+ * add_style(
+    'no-gap-vertical',
+    array(
+      'label'  => _x( 'No vertical gap', 'Block style label.', 'additional-block-styles' ),
+      'blocks' => array(
+        'core/column',
+        'core/columns',
+        'core/cover',
+        'core/gallery',
+        'core/group',
+        'core/heading',
+        'core/image',
+        'core/latest-posts',
+        'core/media-text',
+        'core/paragraph',
+      ),
+    )
+  );
+*/
+
+function add_style($style_name = '', $args){
+  
+  if(empty($args['blocks'])){
+    return false;
   }
+
+  foreach($args['blocks'] as $block_name){
+    register_block_style(
+      $block_name,
+      array(
+          'name'         => $style_name,
+          'label'        => $args['label'],
+          'is_default'   => false,
+          'style_handle' => $args['style_handle'] ?? null,
+          'inline_style' => $args['inline_style'] ?? null,
+      )
+    );
+  
+  }
+
 }
 
 
-function blocks_load_configs()
-{
-  $files = glob(__DIR__ . '/blocks/*/config.php');
-  foreach ($files as $file) {
-    require_once $file;
-  }
-}
 
-function backend()
-{
-  $files = glob(__DIR__ . '/blocks/*/block.css');
-  foreach ($files as $file) {
-    $version = filemtime($file);
-    $key = basename(dirname($file));
-    $rel_path = str_replace(get_stylesheet_directory(), '', $file);
-    $url = get_theme_file_uri($rel_path);
-    wp_enqueue_style($key . '-style', $url, ['wp-edit-blocks'], $version);
-  }
-}
 
-function frontend()
-{
-  $files = glob(__DIR__ . '/*/block.css');
-  foreach ($files as $file) {
-    $version = filemtime($file);
-    $key = basename(dirname($file));
-
-    if (strpos($key, 'lazyblock-') !== false) {
-      $block_name = str_replace('lazyblock-', 'lazyblock/', $key);
-      if (!has_block($block_name)) {
-        continue;
-      }
-    }
-
-    $rel_path = str_replace(get_stylesheet_directory(), '', $file);
-    $url = get_theme_file_uri($rel_path);
-    wp_enqueue_style($key . '-style', $url, [], $version);
-  }
-}
 
 function commone_style()
 {
-  $path = 'assets/commone.css';
+  $path = 'utilities/utilities.css';
   $url = plugins_url($path, __FILE__);
   $path = __DIR__ . '/' . $path;
   if (file_exists($path)) {
     wp_enqueue_style(
-      'style-lbu7',
+      'ckb-utilities',
       $url,
       $dep = [],
       $var = filemtime($path)
     );
   }
-}
-
-
-function chg_template_path($template, $attributes, $block, $context)
-{
-  $plugin_path = sprintf('%s/%s/block.php', __DIR__, $block['slug']);
-  if (file_exists($plugin_path)) {
-    return $plugin_path;
-  }
-
-  return $template;
 }
