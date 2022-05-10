@@ -62,9 +62,6 @@ function add_style($style_name = '', $args){
 }
 
 
-
-
-
 function commone_style()
 {
   $path = 'utilities/utilities.css';
