@@ -1,9 +1,9 @@
 <?php
 /*
-* Plugin Name: _ Content Kit Base
+* Plugin Name: Content Kit
 * Description: Block based design system with additional styles and patterns
 * Author: uptimizt
-* GitHub Plugin URI: https://github.com/uptimizt/content-kit-base
+* GitHub Plugin URI: https://github.com/uptimizt/content-kit
 * Version: 0.220510
 */
 
