@@ -4,7 +4,7 @@
 * Description: Block based design system with additional styles and patterns
 * Author: uptimizt
 * GitHub Plugin URI: https://github.com/uptimizt/content-kit
-* Version: 0.220510
+* Version: 0.221122
 */
 
 namespace ContentKitBase;
