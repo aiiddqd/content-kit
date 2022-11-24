@@ -13,7 +13,7 @@ namespace ContentKitBase;
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\' . 'commone_style');
 add_action('plugins_loaded', function(){
   require_once __DIR__ . '/styles/loader.php';
-  require_once __DIR__ . '/blocks/loader.php';
+  // require_once __DIR__ . '/blocks/loader.php';
 });
 
 
