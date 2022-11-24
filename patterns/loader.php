@@ -1,6 +1,6 @@
 <?php
 
-namespace ContentKitBase\Patterns\Loader;
+namespace ContentKit\Patterns\Loader;
 
 const KEY = 'content-kit-base';
 const NAMESPACE_PATTERN = 'ckb';

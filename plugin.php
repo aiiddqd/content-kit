@@ -1,13 +1,13 @@
 <?php
 /*
-* Plugin Name: @ Content Kit
+* Plugin Name: @ ContentKit
 * Description: Block based design system with additional styles and patterns
 * Author: uptimizt
 * GitHub Plugin URI: https://github.com/uptimizt/content-kit
 * Version: 0.221122
 */
 
-namespace ContentKitBase;
+namespace ContentKit;
 
 // add_filter('lzb/block_render/include_template', __NAMESPACE__ . '\\' . 'chg_template_path', 10, 4);
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\' . 'commone_style');
@@ -17,27 +17,6 @@ add_action('plugins_loaded', function(){
 });
 
 
-
-/**
- * add_style(
-    'no-gap-vertical',
-    array(
-      'label'  => _x( 'No vertical gap', 'Block style label.', 'additional-block-styles' ),
-      'blocks' => array(
-        'core/column',
-        'core/columns',
-        'core/cover',
-        'core/gallery',
-        'core/group',
-        'core/heading',
-        'core/image',
-        'core/latest-posts',
-        'core/media-text',
-        'core/paragraph',
-      ),
-    )
-  );
-*/
 
 function add_style($style_name = '', $args){
   
