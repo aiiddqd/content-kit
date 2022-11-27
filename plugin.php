@@ -10,6 +10,8 @@
 namespace ContentKit;
 
 require_once __DIR__ . '/mods/loader.php';
+require_once __DIR__ . '/patterns/_loader.php';
+
 
 // add_filter('lzb/block_render/include_template', __NAMESPACE__ . '\\' . 'chg_template_path', 10, 4);
 // add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\' . 'commone_style');

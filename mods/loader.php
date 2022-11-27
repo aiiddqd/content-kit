@@ -4,7 +4,7 @@ namespace ContentKitBase\Styles\Loader;
 
 $files = glob(__DIR__ . '/*/config.php');
 foreach ($files as $file) {
-    require_once $file;
+    // require_once $file;
 }
 
 // add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\frontend');
