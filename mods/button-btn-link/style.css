@@ -1,0 +1,12 @@
+.wp-block-button.is-style-btn-link
+.wp-element-button, .wp-block-button__link {
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  color: var(--wp--preset--color--base);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  text-decoration: none;
+}
