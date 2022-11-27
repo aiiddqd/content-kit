@@ -11,6 +11,13 @@ foreach ($configs as $config) {
     require_once $config;
 }
 
+add_action('init', function () {
+    register_block_pattern_category(
+        'cover',
+        array( 'label' => 'Covers' )
+    );
+    
+});
 
 /**
  * Load simple patterns
