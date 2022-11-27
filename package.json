@@ -2,7 +2,7 @@
   "name": "content-kit",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node-sass -w . -o ."
+    "dev": "node-sass -rw . -o ."
   },
   "repository": {
     "type": "git",

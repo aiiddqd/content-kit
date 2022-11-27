@@ -1,0 +1,9 @@
+.wp-block-site-title.is-style-badge a {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--base);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem; }
+  .wp-block-site-title.is-style-badge a:hover, .wp-block-site-title.is-style-badge a:focus {
+    text-decoration: none; }
+  .wp-block-site-title.is-style-badge a:active {
+    color: var(--wp--preset--color--base); }
