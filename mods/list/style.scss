@@ -1,0 +1,6 @@
+ul.is-style-checkboxes>li:before {
+    color: rgb(5 150 105/var(--tw-text-opacity));
+    // content: url(data:image/svg+xml;charset=utf-8,%3Csvg class='io rg ae ll nv ij' viewBox='0 0 12 12' fill='rgb(16 185 129)' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.28 2.28 3.989 8.575 1.695 6.28A1 1 0 0 0 .28 7.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28 2.28z'/%3E%3C/svg%3E);
+    display: inline-block;
+    width: 16px;
+}
