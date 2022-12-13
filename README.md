@@ -23,3 +23,9 @@ to compile scss over all subfolders
 ```
 npm run dev 
 ```
+
+# credits
+- svg illustration https://freesvgillustration.com/illustrations/
+- svg illustration https://undraw.co/illustrations
+- images https://wordpress.org/openverse/
+- logo https://www.svgrepo.com/
