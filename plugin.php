@@ -11,3 +11,4 @@ namespace ContentKit;
 
 require_once __DIR__ . '/mods/loader.php';
 require_once __DIR__ . '/patterns/_loader.php';
+require_once(__DIR__ . '/includes/ColorsTypical.php');
