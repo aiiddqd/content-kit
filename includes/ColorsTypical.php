@@ -262,8 +262,6 @@ function filter_theme_json_theme($theme_json)
 			),
 		),
 	);
-	// do_action('qm/debug', $theme_json->update_with($new_data));
-	// do_action('qm/debug', $new_data);
 
 	return $theme_json->update_with($new_data);
 }
