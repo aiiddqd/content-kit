@@ -12,10 +12,21 @@ foreach ($configs as $config) {
 }
 
 add_action('init', function () {
-    register_block_pattern_category(
-        'cover',
-        array( 'label' => 'Covers' )
-    );
+    $categories = [
+        'hero' => [
+            'label' => 'Hero'
+        ],
+        'media' => [
+            'label' => 'Media'
+        ],
+    ];
+    foreach($categories as $key => $args){
+        register_block_pattern_category(
+            $key,
+            $args
+        );
+    }
+    
     
 });
 

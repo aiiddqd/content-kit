@@ -3,7 +3,7 @@
  * Title: Cover 100vh-hsb
  * Description: Cover height 100vh, header, subheader and button
  * Slug: content-kit/cover-100vh-hsb
- * Categories: cover
+ * Categories: hero
  */
 
 $cover_url = plugins_url('../media/bg/banner-nature.jpg', __FILE__);

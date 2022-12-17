@@ -3,7 +3,7 @@
  * Title: Cover 3
  * Description: Cover with header, text above header, sub header description and button
  * Slug: content-kit/cover-3
- * Categories: cover
+ * Categories: hero
  */
 ?>
 
