@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Title: Cover 3
  * Description: Cover with header, text above header, sub header description and button

@@ -6,7 +6,7 @@
  * Categories: cover
  */
 
-$cover_url = plugins_url('/_media/banner-nature.jpg', __FILE__);
+$cover_url = plugins_url('../media/bg/banner-nature.jpg', __FILE__);
 
 ?>
 <!-- wp:cover {"url":"<?= $cover_url ?>","id":39,"dimRatio":10,"overlayColor":"base","minHeight":100,"minHeightUnit":"vh","isDark":false,"align":"full"} -->
