@@ -8,7 +8,6 @@
 
 $media_url = plugins_url('../../media/screenshot/gutenberg.png', __FILE__);
 
-
 ?>
 
 <!-- wp:cover {"dimRatio":0,"isDark":false,"align":"wide","className":"is-style-default","style":{"spacing":{"padding":{"top":"3rem","right":"3rem","bottom":"3rem","left":"3rem"}}}} -->
