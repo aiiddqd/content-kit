@@ -13,6 +13,9 @@ foreach ($configs as $config) {
 
 add_action('init', function () {
     $categories = [
+        'pages' => [
+            'label' => 'Pages'
+        ],
         'hero' => [
             'label' => 'Hero'
         ],
