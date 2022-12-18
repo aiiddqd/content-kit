@@ -51,6 +51,7 @@ add_action('init', function () {
     );
 
     $patterns = glob(__DIR__ . '/*.php');
+    $patterns = array_merge($patterns, glob(__DIR__ . '/*/*.php'));
     foreach ($patterns as $pattern) {
         if (str_contains($pattern, '_loader.php')) {
             continue;

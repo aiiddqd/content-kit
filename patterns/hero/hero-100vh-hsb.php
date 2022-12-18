@@ -1,12 +1,11 @@
 <?php
 /**
- * Title: Cover 100vh-hsb
- * Description: Cover height 100vh, header, subheader and button
+ * Title: Cover height 100vh, header, subheader and button
  * Slug: content-kit/cover-100vh-hsb
  * Categories: hero
  */
 
-$cover_url = plugins_url('../media/bg/banner-nature.jpg', __FILE__);
+$cover_url = plugins_url('../../media/bg/banner-nature.jpg', __FILE__);
 
 ?>
 <!-- wp:cover {"url":"<?= $cover_url ?>","id":39,"dimRatio":10,"overlayColor":"base","minHeight":100,"minHeightUnit":"vh","isDark":false,"align":"full"} -->

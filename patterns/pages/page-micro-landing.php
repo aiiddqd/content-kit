@@ -4,7 +4,7 @@
  * Slug: content-kit/page-micro-landing
  * Categories: pages
  */
-$logo_url = plugins_url('../media/logo/wordpress.svg', __FILE__);
+$logo_url = plugins_url('../../media/logo/wordpress.svg', __FILE__);
 ?>
 
 <!-- wp:cover {"dimRatio":0,"overlayColor":"base","minHeight":100,"minHeightUnit":"vh","isDark":false,"align":"wide"} -->
