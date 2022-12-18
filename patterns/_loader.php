@@ -32,9 +32,7 @@ add_action('init', function () {
             $args
         );
     }
-    
-    
-});
+}, 5);
 
 /**
  * Load simple patterns
