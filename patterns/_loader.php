@@ -13,11 +13,14 @@ foreach ($configs as $config) {
 
 add_action('init', function () {
     $categories = [
-        'pages' => [
-            'label' => 'Pages'
-        ],
         'hero' => [
             'label' => 'Hero'
+        ],
+        'features' => [
+            'label' => 'Features'
+        ],
+        'pages' => [
+            'label' => 'Pages'
         ],
         'media' => [
             'label' => 'Media'
