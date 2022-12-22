@@ -5,7 +5,7 @@ namespace ContentKit\ColorsTypical;
 // doc https://make.wordpress.org/core/2022/10/10/filters-for-theme-json-data/
 add_filter('wp_theme_json_data_default', __NAMESPACE__ . '\\filter_theme_json_theme');
 
-add_action('init', __NAMESPACE__ . '\\add_for_theme_wh_siteeditor');
+// add_action('init', __NAMESPACE__ . '\\add_for_theme_wh_siteeditor');
 
 
 // reference https://tailwindcss.com/docs/customizing-colors
