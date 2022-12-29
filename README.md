@@ -14,9 +14,8 @@ Based on base Gutenberg blocks
 - add more css utilities
 
 ## long term
-- make addon for Spectra
-- make addon for Formello
 - make patterns library with ZeroCode (as post type)
+- make addon for Spectra
 
 # dev
 to compile scss over all subfolders
