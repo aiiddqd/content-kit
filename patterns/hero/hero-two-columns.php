@@ -1,10 +1,11 @@
 <?php
 /**
- * Title: Section with image, text, buttons.
- * Slug: frost/general-hero-two-columns
- * Categories: frost-general
+ * Title: Image, heading, text, buttons
+ * Slug: ck/hero-two-columns
+ * Categories: ck-hero
  * Viewport Width: 1280
  */
+$media_url = plugins_url('../../media/placeholder-image.webp', __FILE__);
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0px"},"padding":{"top":"var:preset|spacing|x-large","right":"30px","bottom":"var:preset|spacing|x-large","left":"30px"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;padding-top:var(--wp--preset--spacing--x-large);padding-right:30px;padding-bottom:var(--wp--preset--spacing--x-large);padding-left:30px"><!-- wp:media-text {"mediaPosition":"right","mediaId":3485,"mediaLink":"https://frostwp.com/patterns/hero-section/sample-black_1200x1200/","mediaType":"image","mediaWidth":40} -->
@@ -21,6 +22,6 @@
 <!-- wp:button {"style":{"border":{"radius":0}},"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link no-border-radius wp-element-button"><?php echo esc_html__( 'Learn More', 'frost' ); ?></a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/sample-black_1200x1200.jpg'; ?>" alt="Sample Image" class="wp-image-3485 size-full"/></figure></div>
+<!-- /wp:buttons --></div><figure class="wp-block-media-text__media"><img src="<?= $media_url ?>" alt="Sample Image" class="wp-image-3485 size-full"/></figure></div>
 <!-- /wp:media-text --></div>
 <!-- /wp:group -->

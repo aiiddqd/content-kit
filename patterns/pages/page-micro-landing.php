@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Page micro landing
- * Slug: content-kit/page-micro-landing
- * Categories: pages
+ * Slug: ck/page-micro-landing
+ * Categories: ck-pages
  */
 $logo_url = plugins_url('../../media/logo/wordpress.svg', __FILE__);
 ?>

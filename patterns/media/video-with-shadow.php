@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Video with shadow
- * Slug: content-kit/video-with-shadow
- * Categories: media
+ * Slug: ck/video-with-shadow
+ * Categories: ck-media
  */
 ?>
 <!-- wp:group {"align":"wide","className":"is-style-group-shadow","layout":{"type":"default"}} -->

@@ -2,7 +2,7 @@
 /**
  * Title: Hero: cover, header, subheader, buttons, media with shadow #1
  * Slug: ck/hero1
- * Categories: hero
+ * Categories: ck-hero
  * Reference: https://github.com/uptimizt/content-kit/issues/1
  */
 

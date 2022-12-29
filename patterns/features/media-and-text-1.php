@@ -2,7 +2,7 @@
 /**
  * Title: Media and text 1
  * Slug: content-kit/media-and-text-1
- * Categories: text
+ * Categories: ck-features
  */
 ?>
 <!-- wp:media-text {"mediaPosition":"right","mediaId":25087,"mediaLink":"https://bizzapps.ru/test/800x0/","mediaType":"image","mediaWidth":40,"className":"is-style-default"} -->

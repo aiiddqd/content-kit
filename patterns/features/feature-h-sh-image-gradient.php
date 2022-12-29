@@ -3,7 +3,7 @@ patterns/features/.php
 /**
  * Title: Features: header, above header, subheader, link, image
  * Slug: ck/feature-h-sh-image-gradient
- * Categories: features
+ * Categories: ck-features
  */
 
 $media_url = plugins_url('../../media/screenshot/gutenberg.png', __FILE__);
