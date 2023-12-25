@@ -2,7 +2,9 @@
   "name": "content-kit",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node-sass -rw . -o ."
+    "dev": "node-sass -rw . -o .",
+    "tw-dev": "npx tailwindcss -i ./twcss/input.css -o ./twcss/build.css --watch",
+    "tw-prod": "npx tailwindcss -o ./twcss/build.css --minify"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "homepage": "https://github.com/uptimizt/content-kit#readme",
   "dependencies": {
     "node-sass": "^8.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
   }
 }
