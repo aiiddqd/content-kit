@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  corePlugins: ['float', 'padding', 'margin'],
+  content: [
+    './*.php',
+    './**/*.php',
+    './*.html',
+    './**/*.html',
+    './resources/css/*.css',
+
+  ],
   theme: {
     extend: {},
   },
